@@ -4,7 +4,7 @@
 
 Builders and general contractors on Vancouver Island, particularly in areas like Parksville/Qualicum, Nanaimo, and Victoria, who are:
 - Looking to offer their clients a faster, less disruptive, and more affordable alternative for adding backyard suites.
-- Interested in leveraging prefabricated and modular construction for Accessory Dwelling Units (ADUs).
+- Interested in leveraging prefabricated and modular construction for Accessory home Units (ADUs).
 - Seeking reliable partners for supplying high-quality modular backyard suites.
 
 ## Core Message
