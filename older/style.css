@@ -5,28 +5,6 @@
   box-sizing: border-box;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-  max-width: 1920px;
-  
-}
-
-.bg-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url();
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
-}
-
 /* CSS Variables */
 :root {
   --primary-color: rgb(233, 233, 233); /* Light gray */
@@ -113,18 +91,8 @@ p {
 
 img {
   width: 100%;
-  min-height: 3vh;
+  min-height: fit-content;
   opacity: 100%;
-}
-
-.versatile img {
-    height: 33vh;
-    width: 100%;
-    animation: kenburns-zoom 20s infinite alternate;
-    height: 33vh;
-    width: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 hr {
@@ -172,7 +140,7 @@ li {
   position: relative; /* Needed for the pseudo-element positioning */
 }
 
-/* .header::before {
+.header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -180,38 +148,20 @@ li {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url();
+  background-image: url(assets/home_buyers/backyard-suite-exterior-1.png);
   background-size: cover;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.2);
   background-blend-mode: darken;
-} */
-
-.header.bg-overlay::before {
-    background-image: url(assets/contractors/man_steel_framing_homes.jpg);
-    background-position: -770px;
-}
-
-.versatile .container {
-    width: 100%;
 }
 
 .logo {
-  width: 100%;
-  margin-bottom: 0 var(--spacing-medium);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff94;
-  /* padding: 1em; */
+  width: fit-content;
+  margin-bottom: var(--spacing-medium);
 }
 
 .logo img {
-  max-width: 250px;
+  max-width: 200px;
   width: fit-content;
 }
 
@@ -225,7 +175,7 @@ li {
   padding: var(--padding-section);
   gap: var(--gap-large);
   min-height: 100vh;
-  padding-top: 10em;
+  padding-top: 25em;
 }
 
 .wrapper {
@@ -261,12 +211,6 @@ article {
 figcaption {
   text-align: center;
   padding: var(--padding-testimonial-border);
-}
-
-
-figure.border.testimonial {
-    border: 1px solid;
-    padding: var(--spacing-small);
 }
 
 footer {
@@ -358,7 +302,7 @@ a.nav-link {
 .testimonial img {
   width: 85%;
   max-width: 50px;
-  padding-bottom: var(--spacing-small);
+  padding-bottom: var(--spacing-medium);
 }
 
 .testimonials .border {
@@ -488,15 +432,6 @@ section.join-network article {
   padding: 0;
 }
 
-section.section.accelerate.bg-overlay {
-    position: relative;
-}
-
-section.section.accelerate.bg-overlay::before {
-    background-image: url(assets/contractors/builder_carrying_steel_frame.jpg);
-    background-color: rgba(0,0,0,0.6);
-}
-
 article {
   display: flex;
   flex-direction: column;
@@ -509,7 +444,7 @@ h1, h2, h3 {
 }
 
 button.btn {
-  background: #016DC8;
+  background: red;
   color: white;
   width: fit-content;
   padding: var(--padding-btn);
@@ -850,45 +785,9 @@ section.dedicated h3 {
   display: none;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.contact .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    padding: var(--padding-section);
-    gap: 0;
-    min-height: 100vh;
-    padding-top: 0em;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-extra-large);
-}
-
-.content.testimonial {
-    gap: 0;
-}
-
 /* Media Queries */
 @media only screen and (max-width: 425px) {
-  /* .header .content {
+  .header .content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -899,7 +798,7 @@ section.dedicated h3 {
     gap: 0;
     min-height: 100vh;
     padding-top: 10em;
-  } */
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1041,7 +940,7 @@ section.dedicated h3 {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url(assets/contractors/man_steel_framing_homes.jpg);
+    background-image: url(assets/happy-couple-in-new-home.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -1136,28 +1035,6 @@ section.dedicated h3 {
 
   .header .logo {
   margin-bottom: 0em;
-  margin: 0;
-}
-
-    section.section.hero.contractor {
-    background: rgba(0,0,0,0.2);
-}
-
-  .logo {
-    background-color: unset;
-}
-
-  .header .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-  .logo {
-    max-width: fit-content;
 }
 
 }
