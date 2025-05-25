@@ -69,6 +69,8 @@ body {
     margin: 0;
 }
 
+header {display:none;}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -167,6 +169,10 @@ li {
   max-width: 85vw;
 }
 
+.form {
+    width: 66vw;
+}
+
 /* Layout Styles */
 .header {
   position: relative; /* Needed for the pseudo-element positioning */
@@ -188,8 +194,8 @@ li {
 } */
 
 .header.bg-overlay::before {
-    background-image: url(assets/contractors/man_steel_framing_homes.jpg);
-    background-position: -770px;
+    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+    background-position: -620px;
 }
 
 .versatile .container {
@@ -206,7 +212,7 @@ li {
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff94;
+  background-color: #ffffff66;
   /* padding: 1em; */
 }
 
@@ -249,6 +255,18 @@ nav {
   align-content: center;
   justify-content: center;
   width: 85vw;
+}
+
+
+  a.btn {
+    background-color: red;
+    padding: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+  a.btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
 }
 
 article {
@@ -376,6 +394,20 @@ a.nav-link {
   align-items: center;
 }
 
+section.section.hero.contractor {
+  background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+  background-color: rgba(0, 0, 0, 0.5); /* 28% dark mask */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
 .sustainable {
   padding: var(--padding-section);
   position: relative;
@@ -493,7 +525,7 @@ section.section.accelerate.bg-overlay {
 }
 
 section.section.accelerate.bg-overlay::before {
-    background-image: url(assets/contractors/builder_carrying_steel_frame.jpg);
+    background-image: url(assets/contractors/hardhat_closeup_faceless.jpg);
     background-color: rgba(0,0,0,0.6);
 }
 
@@ -514,12 +546,24 @@ button.btn {
   width: fit-content;
   padding: var(--padding-btn);
   border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #0056a3;
+  transform: scale(1.05);
 }
 
 button.register-button {
   background: red;
   color: white;
   padding: var(--padding-btn);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.register-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
 }
 
 .hero-content.about {
@@ -1041,7 +1085,7 @@ section.dedicated h3 {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url(assets/contractors/man_steel_framing_homes.jpg);
+    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -1109,7 +1153,7 @@ section.dedicated h3 {
   }
 
   .container {
-    max-width: 95%;
+    max-width: 1440px;
     margin: 0 auto;
     /* min-height: 70vh; */
   }
@@ -1154,10 +1198,20 @@ section.dedicated h3 {
     align-content: flex-end;
     justify-content: space-between;
     align-items: flex-end;
+    max-width: 1440px;
 }
 
   .logo {
-    max-width: fit-content;
+    max-width: 50%;
+    background-color: #ffffff6e;
+}
+
+.ready {
+  z-index: 10; /* Ensure button is clickable */
+}
+
+  .logo img {
+  max-width: 350px;
 }
 
 }
@@ -1203,7 +1257,7 @@ ul.card-list {
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: var(--gap-small);
+    gap: var(--gap-large);
     margin: 0;
   }
 
@@ -1257,4 +1311,57 @@ ul.card-list {
   li.card {
     flex: 1 1 40%;
   }
+
+.form {
+    width: 66vw;
 }
+
+.btn:hover {
+  cursor: pointer;
+}
+
+}
+</file_content>
+
+Now that you have the latest state of the file, try the operation again with fewer, more precise SEARCH blocks. For large files especially, it may be prudent to try to limit yourself to <5 SEARCH/REPLACE blocks at a time, then wait for the user to respond with the result of the operation before following up with another replace_in_file call to make additional edits.
+(If you run into this error 3 times in a row, you may use the write_to_file tool as a fallback.)
+</error><environment_details>
+# VSCode Visible Files
+style.css
+
+# VSCode Open Tabs
+downsizing.html
+style-menu.css
+script.js
+assets/contractors/wood_frame_construction.jpg
+assets/contractors/modular_home.jpg
+assets/contractors/hardhat_closeup_faceless.jpg
+assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg
+request_quote.html
+custom-styles.css
+contractor.html
+style.css
+assets/logos/logo-transparent-atlas-modular.png
+assets/home_buyers/backyard-suite-exterior.png
+assets/home_buyers/backyard-suite-exterior-1.png
+assets/contractors/easy_assembly.avif
+assets/contractors/red_contruction_hat.jpg
+assets/contractors/man_steel_framing_homes.jpg
+../../../TASK.md
+../../TASK.md
+../../programs/backyard_suites/TASK.md
+../TASK.md
+../../../README.md
+../README.md
+../../README.md
+assets/contractors/builder_carrying_steel_frame.jpg
+
+# Current Time
+5/25/2025, 2:18:19 PM (America/Toronto, UTC-4:00)
+
+# Context Window Usage
+89,402 / 1,048.576K tokens used (9%)
+
+# Current Mode
+ACT MODE
+</environment_details>
