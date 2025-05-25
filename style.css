@@ -5,11 +5,24 @@
   box-sizing: border-box;
 }
 
+.nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-medium);
+    /* height: 2em; */
+    gap: 1em;
+    width: 100%;
+    max-width: none;
+}
+
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-  max-width: 1920px;
-  
+    max-width: 1920px;
 }
 
 .bg-overlay::before {
@@ -127,6 +140,7 @@ img {
     width: 100%;
     object-fit: cover;
     display: block;
+    width: 100vw;
 }
 
 hr {
@@ -199,7 +213,7 @@ li {
 }
 
 .versatile .container {
-    width: 100%;
+    width: 100vw;
 }
 
 .logo {
@@ -217,7 +231,7 @@ li {
 }
 
 .logo img {
-  max-width: 250px;
+  max-width: 100%;
   width: fit-content;
 }
 
@@ -395,8 +409,8 @@ a.nav-link {
 }
 
 section.section.hero.contractor {
-  background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
-  background-color: rgba(0, 0, 0, 0.5); /* 28% dark mask */
+  /* background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg); */
+  /* background-color: rgba(0, 0, 0, 0.5); */ /* 28% dark mask */
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
@@ -404,8 +418,12 @@ section.section.hero.contractor {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   color: white;
+}
+
+section.section.hero.contractor::before {
+  animation: 30s ease 0s infinite alternate none running kenburns-zoom;
 }
 
 .sustainable {
@@ -518,6 +536,7 @@ section.join-network article {
   justify-content: center;
   align-items: center;
   padding: 0;
+  position: relative;
 }
 
 section.section.accelerate.bg-overlay {
@@ -543,10 +562,13 @@ h1, h2, h3 {
 button.btn {
   background: #016DC8;
   color: white;
-  width: fit-content;
+  width: 100%;
+  height: 4em;
   padding: var(--padding-btn);
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 1em;
+  width: 100%;
 }
 
 button.btn:hover {
@@ -573,8 +595,8 @@ button.register-button:hover {
 }
 
 article.content {
-  margin: 0 auto;
-  padding: var(--spacing-extra-large) 0;
+  margin: 4em auto;
+  padding: 0;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -583,6 +605,8 @@ article.content {
   justify-content: center;
   align-items: center;
   /* min-height: 50vh; */
+  height: fit-content;
+  width: 100%;
 }
 
 .hero .content {
@@ -592,7 +616,9 @@ article.content {
   align-content: center;
   justify-content: center;
   align-items: center;
-  gap: var(--gap-extra-large);
+  gap: var(--gap-large);
+  background-color: #00000040;
+  padding: var(--padding-section);
 }
 
 .exclusive-network-content {
@@ -618,10 +644,14 @@ img.logo {
   align-items: center;
   display: flex;
   align-content: center;
-  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   min-height: auto;
+}
+
+ul.list {
+    display: flex;
+    flex-direction: column;
 }
 
 footer .logo img {
@@ -790,6 +820,7 @@ section.who-we-do-it-for {
 }
 
 .hero article.content {
+    background-color: #ffffff21;
 }
 
 .about-alpha h3 {
@@ -810,7 +841,6 @@ section.dedicated h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 91vh;
 }
 
 .section.predictable {
@@ -924,184 +954,49 @@ section.dedicated h3 {
     justify-content: center;
     align-items: center;
     gap: var(--spacing-extra-large);
+    width: 100%;
 }
 
 .content.testimonial {
     gap: 0;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 425px) {
-  /* .header .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    padding: var(--padding-section);
-    gap: 0;
-    min-height: 100vh;
-    padding-top: 10em;
-  } */
-}
-
-@media only screen and (min-width: 768px) {
-  .hero .content {
-    display: flex;
-    max-width: none;
-    flex-direction: column;
-    width: 100%;
-    max-width: none;
-    /* min-height: 66vh; */
-    align-items: center;
-    overflow: hidden;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  article {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-small);
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-  }
-
-  .header .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    padding-top: 10em;
-    gap: 5em;
-    min-height: 100vh;
-  }
-
-  .sustainable .content::before {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  article {
-    flex-direction: column;
-    gap: var(--gap-medium);
-  }
-
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-small);
-    padding: 0;
-    margin: 0 auto;
-    max-width: 50%;
-  }
-
-  article {
-    flex-direction: row;
-    gap: var(--gap-medium);
-  }
-
-  li.card {
-    flex: 1 1 40%;
-    flex-direction: column;
-    gap: var(--gap-medium);
-  }
-
-  .card {
-    flex-direction: row;
-    gap: var(--gap-medium);
-    flex: 1 1 40%;
-    align-items: flex-start;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    padding: 0 0 5px;
-    margin: 0;
-    flex: 0;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 85vw;
-    min-height: auto;
-    padding-bottom: 5px;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: max-content;
-    gap: var(--gap-large);
-    margin-bottom: 3px;
-    flex-wrap: wrap;
-  }
-
-.header .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: flex-end;
-    gap: 5em;
-    min-height: fit-content;
-    margin: 0 auto;
-    padding: var(--spacing-small) 0;
-    width: 95%;
-}
-
-  .header::before {
-    background: none;
-    display: none;
-  }
-
-  .hero {
-    position: relative;
-    background: none;
-    color: white;
-    padding: 0;
-    margin: 0;
-    min-height: 90vh;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.more {
     height: 100%;
-    z-index: -1;
-    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  a.nav-link {
-    background-color: transparent;
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    border: 1px solid;
     padding: var(--padding-btn);
-    /* margin: var(--spacing-small) 0; */
     width: fit-content;
-    text-align: center;
+    /* display: none; */
+    padding: var(--padding-btn);
+    width: fit-content;
+    height: 3em;
+}
+
+img.eye {
+    width: 34px;
+    height: 0.6em;
+    /* display: none; */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a.more-btn {
+    font-size: 0.8em;
+    width: fit-content;
     margin: 0;
-    padding: 0;
-    gap: 0;
-  }
+}
 
 .hero .content {
     display: flex;
@@ -1110,258 +1005,30 @@ section.dedicated h3 {
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: var(--gap-large);
-    height: 90vh;
+    gap: var(--gap-medium);
+    height: fit-content;
+    margin: 1em 0;
+    padding: var(--padding-testimonial-border);
 }
 
-  .image-content.flip {
-    order: 1;
-  }
 
-  .card {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .card-image {
-    max-width: 50%;
-  }
-
-  .card.flip .card-image {
-    order: 1;
-  }
-
-.list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap-large);
+button.btn {
+    width: 100%;
 }
 
-  .features .container {
-    min-height: auto;
-  }
-
-  .max-width {
-    max-width: 75%;
-  }
-
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    /* min-height: 70vh; */
-  }
-
-  .hero-index {
-    height: 95vh;
-  }
-
-  .card-text {
-    padding: var(--spacing-small);
-  }
-
-  .card p {
-    flex-grow: 1;
-  }
-
-  .sustainable .content::before {
-    display: none;
-  }
-
-  .content.ready::before {
-    display: none;
-  }
-
-  .header .logo {
-  margin-bottom: 0em;
-  margin: 0;
+.more.header {
+    width: 100%;
+    background-color: black;
+    transition: background-color 0.3s ease;
 }
 
-    section.section.hero.contractor {
-    background: rgba(0,0,0,0.2);
+.more.header:hover {
+    background-color: transparent; /* Transparent background on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
+    border: 1px solid white; /* Add white border on hover */
 }
 
-  .logo {
-    background-color: unset;
+.more.header:hover .more-btn,
+.more.header:hover .eye {
+    color: white;
 }
-
-  .header .content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: space-between;
-    align-items: flex-end;
-    max-width: 1440px;
-}
-
-  .logo {
-    max-width: 50%;
-    background-color: #ffffff6e;
-}
-
-.ready {
-  z-index: 10; /* Ensure button is clickable */
-}
-
-  .logo img {
-  max-width: 350px;
-}
-
-}
-
-@media only screen and (min-width: 1280px) {
-  .wrapper {
-    display: flex;
-  }
-
-  .hero .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-small);
-    margin: 0;
-  }
-
-
-ul.card-list {
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--gap-large);
-    align-items: flex-start;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    gap: var(--gap-extra-large);
-  }
-
-  .hero .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-large);
-    margin: 0;
-  }
-
-
-
-}
-
-@media only screen and (min-width: 1440px) {
-  .hero .content {
-    display: flex;
-    justify-content: center;
-    /* min-height: 88vh; */
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-
-  .list {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--gap-large);
-  }
-
-  .card {
-    flex: 1;
-  }
-
-  h1 {
-    font-size: 3em;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  .testimonials .content {
-    justify-content: center;
-    gap: var(--gap-large);
-    max-width: var(--max-width-testimonial-content);
-  }
-
-  .testimonials .border {
-    flex: 1;
-    max-width: none;
-  }
-
-  .section.index {
-    /* min-height: 60vh; */
-  }
-
-  li.card {
-    flex: 1 1 40%;
-  }
-
-.form {
-    width: 66vw;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-}
-</file_content>
-
-Now that you have the latest state of the file, try the operation again with fewer, more precise SEARCH blocks. For large files especially, it may be prudent to try to limit yourself to <5 SEARCH/REPLACE blocks at a time, then wait for the user to respond with the result of the operation before following up with another replace_in_file call to make additional edits.
-(If you run into this error 3 times in a row, you may use the write_to_file tool as a fallback.)
-</error><environment_details>
-# VSCode Visible Files
-style.css
-
-# VSCode Open Tabs
-downsizing.html
-style-menu.css
-script.js
-assets/contractors/wood_frame_construction.jpg
-assets/contractors/modular_home.jpg
-assets/contractors/hardhat_closeup_faceless.jpg
-assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg
-request_quote.html
-custom-styles.css
-contractor.html
-style.css
-assets/logos/logo-transparent-atlas-modular.png
-assets/home_buyers/backyard-suite-exterior.png
-assets/home_buyers/backyard-suite-exterior-1.png
-assets/contractors/easy_assembly.avif
-assets/contractors/red_contruction_hat.jpg
-assets/contractors/man_steel_framing_homes.jpg
-../../../TASK.md
-../../TASK.md
-../../programs/backyard_suites/TASK.md
-../TASK.md
-../../../README.md
-../README.md
-../../README.md
-assets/contractors/builder_carrying_steel_frame.jpg
-
-# Current Time
-5/25/2025, 2:18:19 PM (America/Toronto, UTC-4:00)
-
-# Context Window Usage
-89,402 / 1,048.576K tokens used (9%)
-
-# Current Mode
-ACT MODE
-</environment_details>
