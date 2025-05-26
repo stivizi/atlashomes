@@ -18,6 +18,7 @@ nav {
 
 .logo {
     width: fit-content;
+    background: none;
 }
 
 ul {
@@ -36,7 +37,7 @@ li {
 section.section.hero.datasheet::before {
     background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
     background-blend-mode: darken;
-    background-color: var(--overlay-color);
+    background-color: rgb(0 0 0 / 57%);
 }
 
     .card {
