@@ -9,6 +9,7 @@ nav {
     align-content: center;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 
 .button {
@@ -30,4 +31,18 @@ ul {
 
 li {
     flex: 1 0 40%;
+}
+
+section.section.hero.datasheet::before {
+    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+    background-blend-mode: darken;
+    background-color: var(--overlay-color);
+}
+
+    .card {
+    display: flex;
+    flex-direction: row;
+}
+
+    
 }

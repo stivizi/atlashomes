@@ -17,7 +17,7 @@ body {
 .container {
     width: 95%;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1280px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   text-align: center;
+  line-height: 1.8em;
 }
 
 p {
@@ -110,8 +111,73 @@ section {
   position: relative;
 }
 
-section.section.hero.contractor.bg-overlay {
-    height: 100vh;
+section#recommendations {
+    background-color: white;
+    color: black;
+}
+
+section#hero-datasheet {
+    margin-top: 0;
+    padding: 0 0 4em 0;
+    height: 50vh;
+}
+
+section#timelines {
+    color: black;
+    background-color: var(--primary-color);
+}
+
+section#introduction {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+section#hero-datasheet.bg-overlay::before {
+    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+    background-position: top;
+    height: 100%;
+}
+
+section#introduction::before {
+  background-image: url(assets/contractors/red_contruction_hat.jpg);
+}
+
+section#key-findings.features::before {
+    background-image: url(assets/contractors/modular_home.jpg);
+}
+
+section.versatile::before {
+  background-image: url(assets/contractors/frames.jpg);
+}
+
+section#timelines::before {
+    background-image: url(assets/contractors/easy_assembly.avif);
+}
+
+section#quality-durability::before {
+  background-image: url(assets/contractors/atlas-2.jpeg);
+}
+
+section#environmental-impact::before {
+    background-image: url(assets/contractors/builder_carrying_steel_frame.jpg);
+}
+
+section#market-viability::before {
+  background-image: url(assets/contractors/mid_rise_apartment_2.jpeg);
+}
+
+section#challenges::before {
+    background-image: url(assets/contractors/hardhat_closeup_faceless.jpg);
+}
+
+section#recommendations::before {
+  background-image: url(assets/contractors/wood_frame_construction.jpg);
+}
+
+section#conclusion.accelerate.bg-overlay::before {
+    background-image: url(assets/contractors/hardhat_closeup_faceless.jpg);
+    background-blend-mode: darken;
+    background-color: var(--overlay-color);
 }
 
 
@@ -153,9 +219,10 @@ img.eye {
     padding: var(--padding-btn);
     background-color: #016DC8;
     gap: var(--gap-small);
-    width: 100%;
+    width: 85%;
     align-items: center;
     align-content: center;
+    margin: 0 auto;
 }
 
 .button.learn-more {
@@ -189,7 +256,7 @@ section.section.hero.contractor::before {
 }
 
 section.section.accelerate.bg-overlay::before {
-    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+    background-image: url(assets/contractors/hardhat_closeup_faceless.jpg);
     background-blend-mode: darken;
     background-color: var(--overlay-color);
 }
@@ -200,7 +267,7 @@ section.section.accelerate.bg-overlay::before {
 
 .logo {
     background-color: #ffffffbf;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -232,4 +299,115 @@ figure.border.testimonial {
     justify-content: center;
     align-items: center;
     gap: var(--gap-small);
+}
+
+section.section.hero.contractor::before {
+    background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0;
+    gap: var(--gap-small);
+}
+
+span.red-background-white-text {
+    color: white;
+    background-color: red;
+}
+
+.red-background {
+  background-color: #FF0004;
+}
+
+section#introduction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background-image: url(assets/contractors/red_contruction_hat.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0 0 0 / 70%);
+  background-blend-mode: darken;
+  background-color: white;
+  color: black;
+}
+
+section.versatile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(assets/contractors/frames.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0 0 0 / 70%);
+  background-blend-mode: darken;
+}
+
+section#market-viability::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(assets/contractors/affordable_home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0 0 0 / 50%);
+  background-blend-mode: darken;
+}
+
+section#recommendations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(assets/contractors/wood_frame_construction.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0 0 0 / 50%);
+  background-blend-mode: darken;
+  display: none;
+}
+
+section#quality-durability::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(assets/contractors/atlas-2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0 0 0 / 50%);
+  background-blend-mode: darken;
 }
