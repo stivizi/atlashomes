@@ -42,8 +42,55 @@ section.section.hero.datasheet::before {
 
     .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
+    
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-extra-large); /* Using an existing variable for spacing */
+    justify-content: space-around; /* Distribute space around items */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    width: 100%; /* Ensure the row takes full width */
+}
+
+    section#hero-datasheet {
+    padding-top: 0;
+}
+
+    .versatile p {
+    color: white;
+    /* border-top: 1px solid; */
+}
+
+    
+.versatile .content {
+    color: white;
+}
+
+    section#quality-durability::before {
+    background-color: #0000006e;
+    background-blend-mode: darken;
+}
+    section#market-viability::before {
+    background-color: #00000070;
+    background-blend-mode: darken;
+}
+
+    #hero-datasheet .content,
+    #market-viability .content,
+    #quality-durability .content {
+        color:white;
+        display: flex;
+        justify-content: center;
+    }
+
+        #hero-datasheet .content {
+        height: 100vh;
+}
     
 }

@@ -17,13 +17,13 @@ body {
 .container {
     width: 95%;
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    /* height: 100vh; */
 }
 
 .form {
@@ -47,8 +47,8 @@ body {
 
 /* CSS Variables */
 :root {
-  --primary-color: rgb(233, 233, 233); /* Light gray */
-  --secondary-color: black;
+  --primary-color: black ; /* Light gray */
+  --secondary-color: rgb(233, 233, 233);
   --primary-button-color: #016DC8;
   --transparent-button: transparent;
   --overlay-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8em;
 }
 
+
 p {
   text-align: center;
   line-height: 1.8;
@@ -102,7 +103,7 @@ img {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
     max-width: 100%;
 }
 
@@ -111,26 +112,25 @@ section {
   position: relative;
 }
 
-section#recommendations {
-    background-color: white;
+
+section#key-findings .content {
     color: black;
 }
 
 section#hero-datasheet {
-    margin-top: 0;
-    padding: 0 0 4em 0;
-    height: 66vh;
-}
-
-section#timelines {
-    color: black;
-    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
 }
 
 section#introduction {
     background-color: var(--primary-color);
-    color: black;
 }
+
+
+section#introduction .content {
+    color: white;
+}
+
 
 section#hero-datasheet.bg-overlay::before {
     background-image: url(assets/contractors/construction_worker_hardhat_faceless_highbeam_wood.jpg);
@@ -176,8 +176,8 @@ section#recommendations::before {
 
 section#conclusion.accelerate.bg-overlay::before {
     background-image: url(assets/contractors/hardhat_closeup_faceless.jpg);
-    background-blend-mode: darken;
-    background-color: var(--overlay-color);
+    /* background-blend-mode: lighten; */
+    /* background-color: rgb(255 255 255 / 50%); */
 }
 
 
@@ -231,16 +231,23 @@ img.eye {
 }
 
 img.icon {
-  max-height: 100px;
+  max-height: 75px;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: var(--gap-medium);
+    color: var(--primary-color);
+}
+
+#hero-datasheet .content {
+    color: white;
+    min-height: 100vh;
+    position: relative;
 }
 
 .content.testimonial {
@@ -271,8 +278,8 @@ section.section.accelerate.bg-overlay::before {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .logo img {
@@ -281,7 +288,7 @@ section.section.accelerate.bg-overlay::before {
 }
 
 footer .logo {
-    /* background-color: #ffffffbf; */
+    background-color: var(--secondary-color);
     width: 100vw;
     /* display: flex;
     flex-direction: column;
@@ -312,6 +319,7 @@ section.section.hero.contractor::before {
     align-items: center;
     gap: var(--gap-small);
     width: 100%;
+    margin: 4em 0;
 }
 
 .card {
@@ -326,7 +334,7 @@ section.section.hero.contractor::before {
 }
 
 span.red-background-white-text {
-    color: white;
+    color: var(--secondary-color);
     background-color: red;
 }
 
@@ -347,8 +355,8 @@ section#introduction::before {
   background-position: center;
   background-color: rgb(0 0 0 / 70%);
   background-blend-mode: darken;
-  background-color: white;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 section.versatile::before {
@@ -362,7 +370,7 @@ section.versatile::before {
   background-image: url(assets/contractors/frames.jpg);
   background-size: cover;
   background-position: center;
-  background-color: rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0 / 50%);
   background-blend-mode: darken;
 }
 
@@ -410,4 +418,65 @@ section#quality-durability::before {
   background-position: center;
   background-color: rgb(0 0 0 / 50%);
   background-blend-mode: darken;
+}
+
+.contrast {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium); /* Using an existing variable for consistency */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-start; /* Center items horizontally */
+    margin-bottom: var(--spacing-medium); /* Add some space between contrast blocks */
+    flex: 1 1 0;
+}
+
+.contrast h3,
+.contrast p {
+    text-align: center; /* Revert text alignment for h3 and p inside contrast */
+}
+
+footer {
+    background: var(--primary-color);
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+.flex-row-icon {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--gap-small);
+}
+
+.section.border-top,
+h2.border-top,
+h3.border-top {
+    border-top: 1px solid black;
+    padding-top: 3em;
+    width: 100%;
+}
+
+.versatile .content {
+    color: white;
+}
+
+.versatile p {
+    color: white;
+}
+
+#hero-datasheet h1 {
+    margin-top: 1em;
+}
+
+#quality-durability .content,
+#market-viability .content {
+    color: white;
 }

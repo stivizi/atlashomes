@@ -7,7 +7,8 @@
    width="1415.9998"
    height="1415.8667"
    viewBox="0 0 1415.9998 1415.8667"
-   sodipodi:docname="metrics.eps"
+   sodipodi:docname="70_480.svg"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     showgrid="false" />
+     showgrid="false"
+     inkscape:zoom="0.16668236"
+     inkscape:cx="674.93646"
+     inkscape:cy="707.93335"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g10" />
   <g
      id="g10"
      inkscape:groupmode="layer"
@@ -32,42 +42,42 @@
     <g
        id="g10590"
        transform="matrix(0.79408051,0,0,0.79408051,730.72678,171.92405)"
-       style="fill:#ffffff">
+       style="fill:#000000">
       <g
          id="g9919"
          transform="translate(6.3738463,3.134006)"
-         style="fill:#ffffff">
+         style="fill:#000000">
         <path
            d="m 3518.82,1115.35 v -18.61 l -90.81,-189.95 h -29.2 l 90.49,184.5 v 0.64 h -102.04 v 23.42 h 131.56"
-           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
            id="path86" />
         <path
            d="m 3573.37,1010.11 c 0,-54.23 16.68,-85.03 42.35,-85.03 28.88,0 42.67,33.69 42.67,86.95 0,51.34 -13.15,85.03 -42.35,85.03 -24.71,0 -42.67,-30.16 -42.67,-86.95 z m 113.26,3.21 c 0,-70.92 -26.31,-110.06 -72.51,-110.06 -40.75,0 -68.35,38.18 -68.99,107.17 0,69.95 30.16,108.45 72.51,108.45 43.96,0 68.99,-39.15 68.99,-105.56"
-           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.1"
            id="path88" />
       </g>
       <text
          xml:space="preserve"
-         style="font-size:288px;fill:#ffffff;fill-opacity:1;stroke-width:0.754016"
+         style="font-size:288px;fill:#000000;fill-opacity:1;stroke-width:0.754016"
          x="3272.7563"
          y="-498.53363"
          id="text9915"
          transform="scale(1,-1)"><tspan
            sodipodi:role="line"
            id="tspan9913"
-           style="font-size:288px;fill:#ffffff;stroke-width:0.754016"
+           style="font-size:288px;fill:#000000;stroke-width:0.754016"
            x="3272.7563"
            y="-498.53363">480</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:143.955px;fill:#ffffff;fill-opacity:1;stroke-width:0.37689"
+         style="font-size:143.955px;fill:#000000;fill-opacity:1;stroke-width:0.37689"
          x="3399.2583"
          y="-770.29248"
          id="text9915-0"
          transform="scale(1,-1)"><tspan
            sodipodi:role="line"
            id="tspan9913-6"
-           style="font-size:143.955px;fill:#ffffff;stroke-width:0.37689"
+           style="font-size:143.955px;fill:#000000;stroke-width:0.37689"
            x="3399.2583"
            y="-770.29248">-vs-</tspan></text>
     </g>

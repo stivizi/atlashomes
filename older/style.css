@@ -8,7 +8,7 @@
 /* CSS Variables */
 :root {
   --primary-color: rgb(233, 233, 233); /* Light gray */
-  --secondary-color: black;
+  --secondary-color: var(--secondary-color);
   --overlay-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
   --default-font: sans-serif;
   --heading-font: 'Montserrat', sans-serif;
@@ -73,7 +73,7 @@ h3 {
   font-size: 1.2em;
   line-height: 1.4;
   background: none;
-  color: white;
+  color: var(--primary-color);
 }
 
 h4 {
@@ -214,8 +214,8 @@ figcaption {
 }
 
 footer {
-  background-color: white;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* Animations */
@@ -246,7 +246,7 @@ a.nav-link {
 
 .hero {
   background: white;
-  color: black;
+  color: var(--secondary-color);
 }
 
 .hero .content {
@@ -445,7 +445,7 @@ h1, h2, h3 {
 
 button.btn {
   background: red;
-  color: white;
+  color: var(--primary-color);
   width: fit-content;
   padding: var(--padding-btn);
   border: none;
@@ -453,7 +453,7 @@ button.btn {
 
 button.register-button {
   background: red;
-  color: white;
+  color: var(--primary-color);
   padding: var(--padding-btn);
 }
 
@@ -684,16 +684,16 @@ section.who-we-do-it-for {
 }
 
 .about-alpha h3 {
-  color: black;
+  color: var(--secondary-color);
 }
 
 section.dedicated {
   background: white;
-  color: black;
+  color: var(--secondary-color);
 }
 
 section.dedicated h3 {
-  color: black;
+  color: var(--secondary-color);
 }
 
 .join {
@@ -926,7 +926,7 @@ section.dedicated h3 {
   .hero {
     position: relative;
     background: none;
-    color: white;
+    color: var(--primary-color);
     padding: 0;
     margin: 0;
     min-height: 90vh;
