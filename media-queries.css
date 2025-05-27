@@ -17,8 +17,8 @@ nav {
 }
 
 .logo {
-    width: fit-content;
-    background: none;
+    /* width: fit-content; */
+    /* background: none; */
 }
 
 ul {
@@ -91,6 +91,15 @@ section.section.hero.datasheet::before {
 
         #hero-datasheet .content {
         height: 100vh;
+}
+
+    #hero-datasheet .logo {
+    background-color: #ffffffab;
+    width: 100vw;
+}
+
+    .stats {
+    max-width: 50%;
 }
     
 }
